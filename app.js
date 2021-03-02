@@ -1,12 +1,25 @@
 const express = require("express");
 const hd = require("express-handlebars");
+const fs = require("fs");
+const path = require("path");
 
 const app = express();
 const port = 3000;
 
-const words = require("./db/words.json");
+//const words = require("./db/words.json");
 //console.log(words);
 //console.log(typeof(words));
+
+
+const readDir = path.resolve(__dirname, "db");
+const words = fs.readFileSync(path.join(readDir, "words.json"), {encoding: "utf-8"});
+
+console.log(words);
+
+
+
+
+
 
 app.use(express.static(__dirname + "/public"));
 
