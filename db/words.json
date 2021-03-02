@@ -1,0 +1,50 @@
+[
+    {
+        "word" : "Eat",
+        "definition" : ["먹다", "식사를 하다"],
+        "examples" : [
+            {
+                "sentence" : "I eat an apple",
+                "definition" : "저는 사과를 먹습니다."
+            },
+
+            {
+                "sentence" : "I can't eat that",
+                "definition" : "나는 저것을 먹을 수 없다."
+            }
+        ]
+    },
+
+    {
+        "word" : "Run",
+        "definition" : ["달리다", "실행하다", "관리하다/운영하다"],
+        "examples" : [
+            {
+                "sentence" : "The child is running towards her mom.",
+                "definition" : "아이는 엄마를 향해 달려 간다"
+            },
+
+            {
+                "sentence" : "He is running company",
+                "definition" : "그는 회사를 운영 한다."
+            }
+        ]
+    },
+
+    {
+        "word" : "Learn",
+        "definition" : ["배우다", "학습하다"],
+        "examples" : [
+            {
+                "sentence" : "I learn english",
+                "definition" : "나는 영어를 배운다."
+            },
+
+            {
+                "sentence" : "Programming languages fun to learn.",
+                "definition" : "프로그래밍 언어를 배운다는건 즐거운 일이다."
+            }
+        ]
+    }
+    
+]

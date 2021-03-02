@@ -1,4 +1,8 @@
-<h1>템플릿 엔진 사용 가능!!!</h1>
-<h1>{{message}}</h1>
+<div class="ui main text container">
+    <h1 class="ui header">Words List</h1>
 
-<button class="ui button">han</button>
+    {{#each words}}
+    <h1>{{this.word}}</h1>
+    {{/each}}
+
+</div>
