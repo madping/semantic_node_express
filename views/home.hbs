@@ -2,7 +2,15 @@
     <h1 class="ui header">Words List</h1>
 
     {{#each words}}
-    <h1>{{this.word}}</h1>
+
+        <h1>{{this.word}}</h1>
+
+        {{#each this.definition}}
+            <ul>
+                <li>{{this}}</li>
+            </ul>
+        {{/each}}
+
     {{/each}}
 
 </div>

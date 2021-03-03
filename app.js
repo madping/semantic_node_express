@@ -11,10 +11,11 @@ const port = 3000;
 //console.log(typeof(words));
 
 
-const readDir = path.resolve(__dirname, "db");
-const words = fs.readFileSync(path.join(readDir, "words.json"), {encoding: "utf-8"});
+ const readDir = path.resolve(__dirname, "db");
+ const words = fs.readFileSync(path.join(readDir, "words.json"), {encoding: "utf-8"});
+ const han = JSON.parse(words);
 
-console.log(words);
+ console.log(typeof(han));
 
 
 
@@ -36,7 +37,7 @@ app.set("view engine","hbs");
 app.get("/", (req,res)=>{
    res.render("home", {
      // message:"hello"
-     words
+     words:han
    });  
 });
 
