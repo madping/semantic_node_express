@@ -2,30 +2,56 @@
   display: flex;
 }
 
-.flex1 {
+.flex-1 {
   flex: 1;
 }
 
-.flex1 {
-  flex: 1;
+.flex-2 {
+  flex: 2;
 }
 
-.flex1 {
-  flex: 1;
+.flex-3 {
+  flex: 3;
 }
 
-.flex1 {
-  flex: 1;
+.flex-4 {
+  flex: 4;
 }
 
-.flex1 {
-  flex: 1;
+.flex-5 {
+  flex: 5;
 }
 
-.flex1 {
-  flex: 1;
+.flex-6 {
+  flex: 6;
 }
 
-.flex1 {
-  flex: 1;
+.flex-7 {
+  flex: 7;
+}
+
+.card {
+  position: relative;
+  border: 1px dotted black;
+  border-radius: 5px;
+  align-items: center;
+  display: flex; /* 브라우저 크기에 따라 변함 */
+  flex-wrap: wrap; /* display: flex 속성과 쌍을 이룸 */
+}
+
+.main-word {
+  text-align: center;
+  min-width: 300px;
+}
+
+.word-list {
+  min-width: 300px;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
 }

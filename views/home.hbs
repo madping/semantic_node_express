@@ -1,16 +1,49 @@
 <div class="ui main text container">
     <h1 class="ui header">Words List</h1>
 
+    <form action="/" method="post">
+        <div class="ui action input fluid">
+            <input type="text" placeholder="Search..." name="query">
+            <button class="ui button" type="submit">Search</button>
+        </div>
+    </form>
+
     {{#each words}}
 
-        <h1>{{this.word}}</h1>
+        <div class="card flex-box">
+            <div class="flex-1 main-word">
+                <h1>{{this.word}}</h1>
+            </div>
 
-        {{#each this.definition}}
-            <ul>
-                <li>{{this}}</li>
-            </ul>
-        {{/each}}
+            <div class="flex-1 word-list">
+                <ul>
+                    {{#each this.definition}}
+
+                        <li>{{this}}</li>
+
+                    {{/each}}
+                </ul>
+            </div>
+
+            <div class="delete-btn" onclick="deleteWord(this, '{{this.word}}')">
+                <div>X</div>
+            </div>
+        </div>
 
     {{/each}}
 
+    <script>
+        const deleteWord = (el, word) => {
+            $.ajax("/", {
+                method: "DELETE",
+                data: {
+                    word,
+                }
+            })
+
+            let p = el.parentNode.parentNode;
+            let c = el.parentNode;
+            p.removeChild(c)
+        }
+    </script>
 </div>
